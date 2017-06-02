@@ -1,0 +1,16 @@
+body {
+	margin: 0;
+}
+div {
+	outline: px solid black;
+}
+
+.times {
+	background-color: #b48484;
+	font-size: 90px;
+	color: white;
+	margin: 0;
+	padding: 30px;
+	text-align: center;
+
+}
