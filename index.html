@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-	<title>Animal Trivia Game!</title>
+	<title>New York Times</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-	<link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Geostar+Fill' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
 
-    <script src="assets/javascript/app.js"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </head>
 <body>
 
-<div id="maincontainer">
-    <button class="btns">AWESOME SAUCE</button>
-    <input type="text" id="txtinpt">
-    <div id="articles"></div>
-</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="times navbar">
+					<h1><span class="glyphicon glyphicon-globe"></span> New York Times Search</h1>
+				</div>
+			</div>
+		</div>
 
+		<div class="row">
+			 <div class="col-md-12">
+			 	<div class="panel panel-primary">
+  					<div class="panel-heading">
+    					<h3 class="panel-title">Panel title</h3>
+  					</div>
+  					<div class="panel-body form-group">
+    					<label>Search Term:</label>
+    					<input id="userSearch" type="text" class="form-control"><br>
+    					<label>Number of Records to Retrieve:</label>
+    					<input id="userNumber" type="text" class="form-control"><br>
+    					<label>Start Year (Optional):</label>
+    					<input id="userStart" type="text" class="form-control"><br>
+    					<label>End Year (Optional):</label>
+    					<input id="userEnd" type="text" class="form-control"><br>
+
+    					<button id="searchButton" class="btn btn-default"><span class="glyphicon glyphicon-search"> Search</button>
+
+    					<button id="clearButton" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> Clear Results</button>
+
+  					</div>
+				</div>
+			 </div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-primary">
+  					<div class="panel-heading">
+    					<h3 class="panel-title">Panel title</h3>
+  					</div>
+  					<div class="panel-body">
+    					Panel content
+  					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 </body>
 </html>
