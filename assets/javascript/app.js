@@ -4,9 +4,9 @@
 
 $(document).ready(function () {
 
-    $("button").on("click", function () {
+    $("#searchButton").on("click", function () {
 
-        var usersearchstring = $("#txtinpt").val();
+        var usersearchstring = $("#userSearch").val();
         console.log("User searched for article: " + usersearchstring);
 
         var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
@@ -39,7 +39,7 @@ $(document).ready(function () {
 
             for (var i = 0; i < results.length; i++) {
                 var article = results[i];
-                $("<h1>").text(article.headline.main).appendTo("#articles");
+                $("<h3>").text(article.headline.main).appendTo("#articles");
             }
             // ========================
         });
