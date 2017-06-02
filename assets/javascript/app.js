@@ -2,6 +2,22 @@
 
 // **ask if question.length is needed to avoid hard coding question array length**
 
+
+function isNormalInteger(str) {
+    var n = Math.floor(Number(str));
+    return String(n) === str && n >= 0;
+}
+
+function validateDateValue(str) {
+    if (isNormalInteger(str)) {
+        var date = Number.parseInt(str);
+        if (date < 1900 || date > 2017) {
+            return false;
+        }
+    }
+    return true;
+}
+
 $(document).ready(function () {
 
     $("#searchButton").on("click", function () {
@@ -11,8 +27,8 @@ $(document).ready(function () {
 
         var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
-        var startDate = ($("#userStart").val().trim().substr(0,4) || "2000") + "0101";
-        var endDate = ($("#userEnd").val().trim().substr(0,4) || "2017") + "0101";
+        var startDate = ($("#userStart").val().trim().substr(0,4) || "2000") + "0101"; // 20000101
+        var endDate = ($("#userEnd").val().trim().substr(0,4) || "2017") + "0101"; // 20170101
 
         console.log("Start: " + startDate);
         console.log("End: " + endDate);
@@ -43,11 +59,11 @@ $(document).ready(function () {
             // =============== put step 2 in between these dashes ==================
             var results = response.response.docs;
 
-            $("#articles").empty();
+            $(".articles").empty();
 
             for (var i = 0; i < results.length; i++) {
                 var article = results[i];
-                $("<h3>").text(article.headline.main).appendTo("#articles");
+                $("<h3>").text(article.headline.main).appendTo(".articles");
             }
             // ========================
         });
