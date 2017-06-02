@@ -11,12 +11,20 @@ $(document).ready(function () {
 
         var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
-        url += '?' + $.param({
-            'api-key': "1b28775532ae4894b37bd690ab8be500"
-        });
+        var startDate = ($("#userStart").val().trim().substr(0,4) || "2000") + "0101";
+        var endDate = ($("#userEnd").val().trim().substr(0,4) || "2017") + "0101";
 
-        url += "&" + $.param({
-            'q' : usersearchstring
+        console.log("Start: " + startDate);
+        console.log("End: " + endDate);
+
+
+        url += '?' + $.param({
+            'api-key': "1b28775532ae4894b37bd690ab8be500",
+                'q' : $("#userSearch").val(),
+                'limit' : $("#userNumber").val() || "10",
+                'begin_date' : startDate,
+                'end_date' : endDate,
+                'sort' : "newest",
         });
 
         console.log(url);
